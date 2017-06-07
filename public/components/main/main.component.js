@@ -4,18 +4,19 @@
     angular.module('app')
         .component('mainComponent', {
           templateUrl: 'components/main/main.template.html',
-          controller: function ($http) {
+          controller: function () {
+          // controller: function (taskService) {
             var ctrl = this;
-            console.log("test");
             ctrl.tasks = [];
+            ctrl.showTask = showTask;
+            //ctrl.tasks = taskService.tasks;
 
-            ctrl.$onInit = function() {
-              $http.get("/api/tasks")
-                .then(function(response) {
-                  ctrl.posts = response.data;
-                });
-            };
-
+            function showTask() {
+              ctrl.tasks.push({
+                task: ctrl.newTask.task
+              });
+              ctrl.newTask.task = null;
+            }
           }
         });
 
