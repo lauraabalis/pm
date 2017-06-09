@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <h1>To Do</h1>
+    <h1>My Event</h1>
 
     <main class="container">
       <div class="row">
@@ -19,14 +19,14 @@
                     <input class="taskBox form-control" ng-model="$ctrl.newFoodDrink">
                     <span class="input-group-btn">
                       <button class="btn" type="button" ng-click="$ctrl.addFoodDrink()">
-                        Add Task
+                        Add to List
                       </button>
                     </span>
                   </div>
                   <div class="taskBorder" ng-repeat="item in $ctrl.foodDrink">
                     <input type="checkbox" name="task" class="checkTask">
                     <span class="taskText">{{item.task}}</span>
-                  </div><br><br>
+                  </div>
                 </form>
 
                 <h3>Activities</h3>
@@ -35,14 +35,14 @@
                     <input class="taskBox form-control" ng-model="$ctrl.newActivity">
                     <span class="input-group-btn">
                       <button class="btn" type="button" ng-click="$ctrl.addActivity()">
-                        Add Task
+                        Add to List
                       </button>
                     </span>
                   </div>
                   <div class="taskBorder" ng-repeat="activity in $ctrl.activities" ng-class="activityColor">
                     <input type="checkbox" name="task" class="checkTask" ng-model="activityColor" ng-true-value="'green'" ng-false-value="'red'">
                     <span class="taskText">{{activity.task}}</span>
-                  </div><br><br>
+                  </div>
                 </form>
               </div>
 
@@ -54,14 +54,14 @@
                     <input class="taskBox form-control" ng-model="$ctrl.newDecor">
                     <span class="input-group-btn">
                       <button class="btn" type="button" ng-click="$ctrl.addDecor()">
-                        Add Task
+                        Add to List
                       </button>
                     </span>
                   </div>
                   <div class="taskBorder" ng-repeat="item in $ctrl.decor">
                     <input type="checkbox" name="task" class="checkTask">
                     <span class="taskText">{{item.task}}</span>
-                  </div><br><br>
+                  </div>
                 </form>
 
                 <h3>Party Favors</h3>
@@ -70,14 +70,14 @@
                     <input class="taskBox form-control" ng-model="$ctrl.newPartyFavor">
                     <span class="input-group-btn">
                       <button class="btn" type="button" ng-click="$ctrl.addPartyFavor()">
-                        Add Task
+                        Add to List
                       </button>
                     </span>
                   </div>
                   <div class="taskBorder" ng-repeat="partyFavor in $ctrl.partyFavors">
                     <input type="checkbox" name="task" class="checkTask">
                     <span class="taskText">{{partyFavor.task}}</span>
-                  </div><br><br>
+                  </div>
                 </form>
                 </div>
         </div>
