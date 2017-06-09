@@ -8,49 +8,39 @@
     taskService.$inject = ['$http'];
 
     function taskService($http) {
-      this.foodDrinkTasks = [
-        {
-          task: "Task1"
-        },
-        {
-          task: "Task2"
-        },
-        {
-          task: "Task3"
-        }
-    ];
-    this.activityTasks = [
-      {
-        task: "Task4"
-      },
-      {
-        task: "Task5"
-      },
-      {
-        task: "Task6"
-      }
-    ];
-    this.decorTasks = [
-      {
-        task: "Task7"
-      },
-      {
-        task: "Task8"
-      },
-      {
-        task: "Task9"
-      }
-    ];
-    this.partyFavorTasks = [
-      {
-        task: "Task10"
-      },
-      {
-        task: "Task11"
-      },
-      {
-        task: "Task12"
-      }
-    ];
+      this.tasks = {
+        foodDrinkTasks: [
+          {task: "Hummus and pita"},
+          {task: "Champagne"},
+          {task: "Cake"}
+        ],
+        activityTasks: [
+          {task: "Photo booth and props"},
+          {task: "D.J."},
+          {task: "Ring toss"}
+        ],
+        decorTasks: [
+          {task: "Flowers"},
+          {task: "Candles"},
+          {task: "Confetti"}
+        ],
+        partyFavorTasks: [
+          {task: "Jewelry"},
+          {task: "Candy"},
+          {task: "Stationery"}
+        ]
+      };
+
+      this.getTasks = function(key) {
+        return this.tasks[key];
+      };
+
+      this.addTask = function(key, task) {
+        this.tasks[key].push(task);
+      };
+
+      // this.removeTask = function(key, task) {
+      //   var
+      // }
     }
 })();

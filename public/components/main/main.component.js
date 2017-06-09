@@ -9,19 +9,19 @@
             var ctrl = this;
 
             // ctrl.foodDrink = [];
-            ctrl.foodDrink = taskService.foodDrinkTasks;
+            ctrl.foodDrink = taskService.getTasks("foodDrinkTasks");
             ctrl.addFoodDrink = addFoodDrink;
 
             // ctrl.activities = [];
-            ctrl.activities = taskService.activityTasks;
+            ctrl.activities = taskService.getTasks("activityTasks");
             ctrl.addActivity = addActivity;
 
             // ctrl.decor = [];
-            ctrl.decor = taskService.decorTasks;
+            ctrl.decor = taskService.getTasks("decorTasks");
             ctrl.addDecor = addDecor;
 
             // ctrl.partyFavors = [];
-            ctrl.partyFavors = taskService.partyFavorTasks;
+            ctrl.partyFavors = taskService.getTasks("partyFavorTasks");
             ctrl.addPartyFavor = addPartyFavor;
 
             // ctrl.tasks = taskService.tasks;
