@@ -39,8 +39,5 @@
         this.tasks[key].push(task);
       };
 
-      // this.removeTask = function(key, task) {
-      //   var
-      // }
     }
 })();

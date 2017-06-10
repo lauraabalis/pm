@@ -4,27 +4,20 @@
     angular.module('app')
         .component('mainComponent', {
           templateUrl: 'components/main/main.template.html',
-          // controller: function () {
           controller: function (taskService) {
             var ctrl = this;
 
-            // ctrl.foodDrink = [];
             ctrl.foodDrink = taskService.getTasks("foodDrinkTasks");
             ctrl.addFoodDrink = addFoodDrink;
 
-            // ctrl.activities = [];
             ctrl.activities = taskService.getTasks("activityTasks");
             ctrl.addActivity = addActivity;
 
-            // ctrl.decor = [];
             ctrl.decor = taskService.getTasks("decorTasks");
             ctrl.addDecor = addDecor;
 
-            // ctrl.partyFavors = [];
             ctrl.partyFavors = taskService.getTasks("partyFavorTasks");
             ctrl.addPartyFavor = addPartyFavor;
-
-            // ctrl.tasks = taskService.tasks;
 
             ctrl.activityCheckbox = false;
 
